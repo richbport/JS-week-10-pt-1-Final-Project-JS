@@ -1,3 +1,3 @@
-function searchChange() {
-    
+function searchChange(event) {
+    console.log(event)
 }

@@ -3,7 +3,9 @@ function searchChange(event) {
 }
 
 async function renderMovies() {
-    console.log( await fetch('http://omdbapi.com/?s=batman&apikey=4c2eefb7'))
+    const response = await fetch('http://omdbapi.com/?s=batman&apikey=4c2eefb7')
+    const data = await response.json()
+    console.log(data)
 }
 
 renderMovies()

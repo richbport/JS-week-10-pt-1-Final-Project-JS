@@ -11,10 +11,10 @@ async function renderMovies() {
     const data = await response.json()
     const moviesArr = data.Search
     console.log(moviesArr)
-    moviesWrapper.innerHTML = moviesArr.map((movie) => {
+    moviesWrapper.innerHTML = moviesArr.slice(0, 6).map((movie) => {
         return `
         <div class="movie">
-        <img src= alt="" />
+        <img src=${movie.Poster} alt="" />
         <h2>${movie.Title}</h2>
         <h4>${movie.Year}</h4>
         <button>Learn More</button>

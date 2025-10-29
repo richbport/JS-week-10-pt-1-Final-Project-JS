@@ -7,9 +7,10 @@ function searchChange(event) {
 }
 
 async function renderMovies() {
-    const response = await fetch('http://omdbapi.com/?s=fast&apikey=4c2eefb7')
+    const response = await fetch('http://omdbapi.com/?s=batman&apikey=4c2eefb7')
     const data = await response.json()
     const moviesArr = data.Search
+    console.log(moviesArr)
     moviesWrapper.innerHTML = moviesArr.map((movie) => {
         return `
         <div class="movie">

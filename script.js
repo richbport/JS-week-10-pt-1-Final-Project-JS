@@ -20,7 +20,7 @@ async function renderMovies() {
         <button>Learn More</button>
         </div>
         `
-    })
+    }).join("")
 }
 
 renderMovies()

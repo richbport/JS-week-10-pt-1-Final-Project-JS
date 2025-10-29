@@ -15,8 +15,8 @@ async function renderMovies() {
         return `
         <div class="movie">
         <img src= alt="" />
-        <h2>Title</h2>
-        <h4>Year</h4>
+        <h2>${movie.Title}</h2>
+        <h4>${movie.Year}</h4>
         <button>Learn More</button>
         </div>
         `

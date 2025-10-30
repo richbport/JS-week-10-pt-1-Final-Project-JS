@@ -7,7 +7,7 @@ function searchChange(event) {
     renderMovies(event.target.value)
 }
 
-async function renderMovies() {
+async function renderMovies(searchTerm) {
     const response = await fetch('http://omdbapi.com/?s=batman&apikey=4c2eefb7')
     const data = await response.json()
     const moviesArr = data.Search

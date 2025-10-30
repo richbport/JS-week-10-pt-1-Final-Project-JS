@@ -1,14 +1,12 @@
 const moviesWrapper = document.querySelector('.movies')
 
-console.log(moviesWrapper)
-
 function searchChange(event) {
-    console.log(event.target.value)
     renderMovies(event.target.value)
 }
 
 async function renderMovies(searchTerm) {
-    const response = await fetch('http://omdbapi.com/?s=batman&apikey=4c2eefb7')
+  console.log("This is the search term", searchTerm)
+    const response = await fetch(`http://omdbapi.com/?s=${searchTerm}&apikey=4c2eefb7`)
     const data = await response.json()
     const moviesArr = data.Search
     console.log(moviesArr)

@@ -4,6 +4,7 @@ console.log(moviesWrapper)
 
 function searchChange(event) {
     console.log(event.target.value)
+    renderMovies(event.target.value)
 }
 
 async function renderMovies() {
@@ -22,5 +23,3 @@ async function renderMovies() {
         `
     }).join("")
 }
-
-renderMovies()

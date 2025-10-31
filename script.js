@@ -30,3 +30,7 @@ function displayMovies(movieList) {
     })
     .join("");
 }
+
+function sortChange(event) {
+  console.log(event.target.value)
+}

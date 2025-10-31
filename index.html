@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movies Library</title>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+  </head>
+  <body>
     <div>
-        <input type="text"
+      <input
+        type="text"
         placeholder="Search by Name and find the best..."
-        onchange="searchChange(event)">
+        onchange="searchChange(event)"
+      />
+    </div>
+    <div>
+      <span class="black-txt">Search Results</span>
+      <h3>
+        <span class="searchName" style="color: #100000f8; opacity: 0.5"></span>
+      </h3>
     </div>
     <section class="search">
-        <div class="movies">
-            
-        </div>
+      <div class="movies"></div>
     </section>
-</body>
+  </body>
 </html>

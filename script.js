@@ -1,7 +1,9 @@
 const moviesWrapper = document.querySelector('.movies')
+const searchName = document.querySelector('.searchName')
 
 function searchChange(event) {
     renderMovies(event.target.value)
+    searchName.innerHTML = event.target.value
 }
 
 async function renderMovies(searchTerm) {

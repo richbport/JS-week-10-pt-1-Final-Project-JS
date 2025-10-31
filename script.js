@@ -7,13 +7,11 @@ function searchChange(event) {
 }
 
 async function renderMovies(searchTerm) {
-  console.log("This is the search term", searchTerm);
   const response = await fetch(
     `http://omdbapi.com/?s=${searchTerm}&apikey=4c2eefb7`
   );
   const data = await response.json();
   const moviesArr = data.Search;
-  console.log(moviesArr);
   displayMovies(moviesArr);
 }
 

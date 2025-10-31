@@ -6,6 +6,8 @@ function searchChange(event) {
   searchName.innerHTML = event.target.value;
 }
 
+let currentMovies = []
+
 async function renderMovies(searchTerm) {
   const response = await fetch(
     `http://omdbapi.com/?s=${searchTerm}&apikey=4c2eefb7`

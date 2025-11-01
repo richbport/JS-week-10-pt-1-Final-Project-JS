@@ -34,5 +34,5 @@ function displayMovies(movieList) {
 }
 
 function sortChange(event) {
-  console.log(event.target.value)
+  const sortOption = (event.target.value)
 }

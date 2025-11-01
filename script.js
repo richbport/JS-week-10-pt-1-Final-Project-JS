@@ -13,8 +13,8 @@ async function renderMovies(searchTerm) {
     `http://omdbapi.com/?s=${searchTerm}&apikey=4c2eefb7`
   );
   const data = await response.json();
-  const moviesArr = data.Search;
-  displayMovies(moviesArr);
+  currentMovies = data.Search;
+  displayMovies(currentMovies);
 }
 
 function displayMovies(movieList) {

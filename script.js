@@ -35,6 +35,8 @@ function displayMovies(movieList) {
 
 function sortChange(event) {
   const sortOption = event.target.value
+
+  let sortedMovies = [...currentMovies]
   
   if (sortOption === "newest") {
     

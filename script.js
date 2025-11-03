@@ -41,7 +41,8 @@ function sortChange(event) {
   if (sortOption === "newest") {
     sortedMovies.sort((a, b) => b.Year - a.Year)
   } else if (sortOption === "oldest") {
-    
+    sortedMovies.sort((a, b) => a.Year - b.Year)
   }
+  renderMovies(sortedMovies)
 }
 

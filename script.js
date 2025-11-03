@@ -39,7 +39,7 @@ function sortChange(event) {
   let sortedMovies = [...currentMovies]
   
   if (sortOption === "newest") {
-    
+    sortedMovies.sort((a, b) => b.Year - a.Year)
   } else if (sortOption === "oldest") {
     
   }

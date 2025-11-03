@@ -1,12 +1,12 @@
-const moviesWrapper = document.querySelector(".movies");
 const searchName = document.querySelector(".searchName");
+const moviesWrapper = document.querySelector(".movies");
+
+let currentMovies = []
 
 function searchChange(event) {
   renderMovies(event.target.value);
   searchName.innerHTML = event.target.value;
 }
-
-let currentMovies = []
 
 async function renderMovies(searchTerm) {
   const response = await fetch(

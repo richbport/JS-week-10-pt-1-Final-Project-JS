@@ -3,11 +3,13 @@ const moviesWrapper = document.querySelector(".movies");
 
 let currentMovies = []
 
+// HANDLING THE SEARCH
 function searchChange(event) {
   renderMovies(event.target.value);
   searchName.innerHTML = event.target.value;
 }
 
+// RENDERING MOVIES / Calling the API
 async function renderMovies(searchTerm) {
   const response = await fetch(
     `http://omdbapi.com/?s=${searchTerm}&apikey=4c2eefb7`
@@ -17,9 +19,10 @@ async function renderMovies(searchTerm) {
   displayMovies(currentMovies);
 }
 
+//DISPLAYING MOVIES
 function displayMovies(movieList) {
   moviesWrapper.innerHTML = movieList
-    .slice(0, 6)
+    // .slice(0, 6)
     .map((movie) => {
       return `
         <div class="movie">
@@ -33,6 +36,7 @@ function displayMovies(movieList) {
     .join("");
 }
 
+//SORTING MOVIES
 function sortChange(event) {
   const sortOption = event.target.value
 

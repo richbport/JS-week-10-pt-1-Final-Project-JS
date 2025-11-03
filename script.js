@@ -1,6 +1,8 @@
+// GRABBING ELEMENTS FROM HTML
 const searchName = document.querySelector(".searchName");
 const moviesWrapper = document.querySelector(".movies");
 
+// GLOBAL MOVIES VARIABLE
 let currentMovies = []
 
 // HANDLING THE SEARCH
@@ -9,7 +11,7 @@ function searchChange(event) {
   searchName.innerHTML = event.target.value;
 }
 
-// RENDERING MOVIES / Calling the API
+// RENDERING MOVIES / CALLING THE API
 async function renderMovies(searchTerm) {
   const response = await fetch(
     `http://omdbapi.com/?s=${searchTerm}&apikey=4c2eefb7`
@@ -22,7 +24,7 @@ async function renderMovies(searchTerm) {
 //DISPLAYING MOVIES
 function displayMovies(movieList) {
   moviesWrapper.innerHTML = movieList
-    // .slice(0, 6)
+    .slice(0, 6)
     .map((movie) => {
       return `
         <div class="movie">
@@ -43,9 +45,9 @@ function sortChange(event) {
   let sortedMovies = [...currentMovies]
   
   if (sortOption === "newest") {
-    sortedMovies.sort((a, b) => b.Year - a.Year)
+    sortedMovies.sort((a, b) => Number(b.Year) - Number(a.Year))
   } else if (sortOption === "oldest") {
-    sortedMovies.sort((a, b) => a.Year - b.Year)
+    sortedMovies.sort((a, b) => Number(a.Year) - Number(b.Year))
   }
   displayMovies(sortedMovies)
 }

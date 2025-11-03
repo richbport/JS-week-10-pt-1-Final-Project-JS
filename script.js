@@ -34,12 +34,12 @@ function displayMovies(movieList) {
 }
 
 function sortChange(event) {
-  const sortOption = (event.target.value)
-}
-
-if (sortOption === "newest") {
+  const sortOption = event.target.value
   
+  if (sortOption === "newest") {
+    
   } else if (sortOption === "oldest") {
-
+    
   }
+}
 
